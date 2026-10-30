@@ -129,28 +129,14 @@ updates `static/evidence.json` and `evidence.md`.
 ## Deploy (Render)
 
 1. Push this repo to GitHub.
-2. On render.com: **New → Blueprint**, pick the repo. `render.yaml` configures
-   everything.
-3. Set `QLOO_API_KEY` and `LLM_API_KEY` as secret environment variables when
-   prompted. Keys never reach the browser; the frontend only talks to this
-   backend.
-
-## Limitations
-
-- Qloo affinity describes aggregate taste. It is not ticket demand, venue
-  capacity or artist fees, and the app says so in every plan.
-- In the hackathon dataset, Qloo's trending endpoint returned flat values for
-  the artists we tested, so "rising" is based on `bias.trends` re-ranking, not
-  a time series.
-- Venue (place) data is sparse for some cities. When Qloo returns none, the
-  app says so instead of inventing venues.
-- City matching uses GeoNames population data, which has occasional quirks;
-  known ones are corrected in `app/geo.py`.
-- Plans are kept in server memory for editing and blending. Share links keep
-  working from a saved copy (read-only) until the server's disk is reset, which
-  on Render's free tier happens on each redeploy.
-- Responses are cached server-side in `.cache/` (git-ignored); Qloo data is
-  never committed to the repository.
+2. On render.com: **New → Web Service**, connect the repo (or paste its URL under
+   Public Git Repository). Alternatively, **New → Blueprint** uses `render.yaml`.
+3. Settings:
+   - Build command: `pip install -r requirements.txt`
+   - Start command: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+4. Add environment variables: `QLOO_API_KEY`, `LLM_API_KEY`,
+   `LLM_MODEL=gemini-3.1-flash-lite`, `PYTHON_VERSION=3.12.7`.
+   Keys never reach the browser; the frontend only talks to this backend.
 
 ## Project layout
 
