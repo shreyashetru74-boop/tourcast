@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tourcast</title>
+  <meta name="description" content="Plan a tour around where your fans actually are, using Qloo's taste graph.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="/static/styles.css?v=15">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%23FFB547'/><path d='M9 20l5-8 4 5 5-7' stroke='%230F1A2C' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+</head>
+<body>
+  <header class="top">
+    <h1 class="wordmark">Tourcast</h1>
+    <p class="tagline">Plan your tour around where your fans actually are.</p>
+    <span id="dataBadge" class="badge" hidden></span>
+  </header>
+
+  <main>
+    <section class="planner">
+      <form id="planForm" class="panel form" autocomplete="off">
+        <label for="artists">Artists you sound like</label>
+        <input id="artists" name="artists" required placeholder="e.g. Phoebe Bridgers, Bon Iver">
+        <p class="hint">Up to four, separated by commas. No streams yet? Tourcast borrows the fan geography of the acts you sound like.</p>
+
+        <label for="artistLabel">Your act's name <span class="opt">(optional)</span></label>
+        <input id="artistLabel" name="artistLabel" maxlength="60" placeholder="Shown on your plan">
+
+        <div class="row">
+          <div>
+            <label for="country">Country</label>
+            <select id="country" name="country"></select>
+          </div>
+          <div>
+            <label for="shows">Shows</label>
+            <input id="shows" name="shows" type="number" min="2" max="10" value="5">
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label for="home">Home city</label>
+            <input id="home" name="home" placeholder="Where the tour starts">
+          </div>
+          <div>
+            <label for="age">Audience age</label>
+            <select id="age" name="age"></select>
+          </div>
+        </div>
+
+        <button id="goBtn" type="submit">Plan my tour</button>
+
+        <div class="examples">
+          <span>Try:</span>
+          <button type="button" class="ex" data-a="Phoebe Bridgers, Bon Iver" data-l="Juniper Lane" data-c="United States" data-h="Los Angeles">A new act that sounds like Phoebe Bridgers + Bon Iver</button>
+          <button type="button" class="ex" data-a="Phoebe Bridgers" data-c="United States" data-h="Los Angeles">Phoebe Bridgers, US</button>
+          <button type="button" class="ex" data-a="Anuv Jain, Prateek Kuhad" data-c="India" data-h="Bengaluru">Anuv Jain, India</button>
+          <button type="button" class="ex" data-a="Arlo Parks" data-c="United Kingdom" data-h="London">Arlo Parks, UK</button>
+        </div>
+      </form>
+
+      <section class="panel trace" aria-live="polite">
+        <h2>What the agent is doing</h2>
+        <ol id="trace" class="trace-list"><li class="idle">Waiting for an artist.</li></ol>
+      </section>
+    </section>
+
+    <section class="map-wrap">
+      <div id="map" role="img" aria-label="Map of fan affinity and tour route"></div>
+      <div id="mapEmpty" class="map-empty">
+        <p>Enter an artist to see where their fans are.</p>
+      </div>
+      <div class="legend" id="legend" hidden>
+        <span class="swatch heat"></span> Fan affinity
+        <span class="swatch route"></span> Tour route
+      </div>
+    </section>
+
+    <section id="results" class="results" hidden>
+      <div class="shirt">
+        <p id="insight" class="insight" hidden></p>
+        <p id="headline" class="headline"></p>
+        <p id="sharedNote" class="shared-note" hidden></p>
+        <div id="decisions" class="decisions" hidden>
+          <h3 id="decisionsTitle">How the agent decided</h3>
+          <ul id="decisionList"></ul>
+        </div>
+        <div id="blender" class="blender" hidden>
+          <label for="blendRange">Blend your sound</label>
+          <div class="blend-row">
+            <span id="blendA" class="blend-end"></span>
+            <input id="blendRange" type="range" min="0" max="100" step="10" value="50">
+            <span id="blendB" class="blend-end"></span>
+          </div>
+          <p id="blendValue" class="sub small"></p>
+        </div>
+        <ol id="tourList" class="tour-list"></ol>
+        <p id="totalKm" class="total-km"></p>
+        <div id="tourTools" class="tour-tools">
+          <button type="button" id="posterBtn" class="primary-tool">Make tour poster</button>
+          <button type="button" id="copyBtn">Copy plan</button>
+          <button type="button" id="shareBtn">Copy link</button>
+          <button type="button" id="printBtn">Print or save as PDF</button>
+          <span id="editStatus" class="edit-status" aria-live="polite"></span>
+        </div>
+        <div id="altWrap" class="alt-wrap">
+          <h3>Other strong markets</h3>
+          <div id="alts" class="alt-chips"></div>
+        </div>
+      </div>
+      <article id="cityPanel" class="panel city-panel" aria-live="polite"></article>
+    </section>
+
+
+    <section id="hiddenSection" class="hidden-sec" hidden>
+      <h2>Hidden markets</h2>
+      <p class="sub">Cities that rank far higher for this sound than their size suggests. A biggest-cities tour would never stop here. Circled in pink on the map.</p>
+      <ul id="hiddenList" class="hidden-list"></ul>
+    </section>
+
+    <section id="compareSection" class="compare" hidden>
+      <h2>Why not just play the biggest cities?</h2>
+      <p id="cmpSummary" class="sub cmp-summary"></p>
+      <div id="cmpGrid" class="compare-grid"></div>
+      <div id="blind" class="blind" hidden>
+        <h3>Blind test: does "sounds like" find real fans?</h3>
+        <p id="blindSummary" class="blind-summary"></p>
+        <details>
+          <summary>How the test works, and every result</summary>
+          <p class="sub">For each artist, Tourcast planned a 5-city tour using only the three artists Qloo rates most similar to them, never the artist's own data. Those cities were then ranked against the artist's own Qloo fan map, and compared with a biggest-cities tour and a random one scored the same way.</p>
+          <div class="blind-table-wrap"><table id="blindTable"></table></div>
+        </details>
+      </div>
+    </section>
+
+    <section id="crossSection" class="cross" hidden>
+      <h2>Your fans also love</h2>
+      <p class="sub">Sponsorship and cross-promotion leads, from Qloo's taste graph.</p>
+      <div id="cross" class="cross-grid"></div>
+    </section>
+
+    <section id="provSection" class="prov" hidden>
+      <details>
+        <summary id="provSummary">Qloo requests behind this plan</summary>
+        <div id="calls" class="calls"></div>
+      </details>
+      <ul id="caveats" class="caveats"></ul>
+    </section>
+  </main>
+
+  <dialog id="posterDlg" class="poster-dlg" aria-labelledby="posterTitle">
+    <h2 id="posterTitle">Your tour poster</h2>
+    <img id="posterImg" alt="Tour poster listing each stop with its Fan Fit rank">
+    <div class="poster-actions">
+      <a id="posterDl" download="tourcast-poster.png">Download poster</a>
+      <button type="button" id="posterClose">Close</button>
+    </div>
+  </dialog>
+
+  <footer class="foot">
+    Taste data from <a href="https://www.qloo.com" target="_blank" rel="noopener">Qloo</a>.
+    Affinity shows aggregate taste, not ticket demand. Map tiles &copy; Esri; map data &copy; OpenStreetMap contributors.
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.heat/0.2.0/leaflet-heat.js"></script>
+  <script src="/static/app.js?v=15"></script>
+</body>
+</html>

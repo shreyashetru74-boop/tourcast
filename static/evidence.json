@@ -1,0 +1,711 @@
+{
+ "summary": {
+  "artists": 12,
+  "tourcast_median": 7,
+  "biggest_median": 23.5,
+  "random_median": 240,
+  "beat_biggest": 9,
+  "top20_hits": 43,
+  "top20_total": 60,
+  "demo_data": false,
+  "qloo_requests": 48
+ },
+ "rows": [
+  {
+   "artist": "Phoebe Bridgers",
+   "country": "United States",
+   "markets": 480,
+   "planned_from": [
+    "Lucy Dacus",
+    "Julien Baker",
+    "Faye Webster"
+   ],
+   "tourcast": [
+    {
+     "city": "Portland, OR",
+     "rank": 1
+    },
+    {
+     "city": "Boston, MA",
+     "rank": 6
+    },
+    {
+     "city": "Seattle, WA",
+     "rank": 5
+    },
+    {
+     "city": "Asheville, NC",
+     "rank": 16
+    },
+    {
+     "city": "San Francisco, CA",
+     "rank": 8
+    }
+   ],
+   "biggest": [
+    {
+     "city": "New York City, NY",
+     "rank": 35
+    },
+    {
+     "city": "Los Angeles, CA",
+     "rank": 20
+    },
+    {
+     "city": "Chicago, IL",
+     "rank": 42
+    },
+    {
+     "city": "Houston, TX",
+     "rank": 277
+    },
+    {
+     "city": "Phoenix, AZ",
+     "rank": 131
+    }
+   ],
+   "tourcast_median": 6,
+   "biggest_median": 42,
+   "random_median": 241,
+   "top20_hits": 5
+  },
+  {
+   "artist": "Noah Kahan",
+   "country": "United States",
+   "markets": 478,
+   "planned_from": [
+    "Wild Rivers",
+    "Maisie Peters",
+    "Lizzy McAlpine"
+   ],
+   "tourcast": [
+    {
+     "city": "Boston, MA",
+     "rank": 4
+    },
+    {
+     "city": "Seattle, WA",
+     "rank": 21
+    },
+    {
+     "city": "Los Angeles, CA",
+     "rank": 65
+    },
+    {
+     "city": "Orlando, FL",
+     "rank": 32
+    },
+    {
+     "city": "Nashville, TN",
+     "rank": 41
+    }
+   ],
+   "biggest": [
+    {
+     "city": "New York City, NY",
+     "rank": 45
+    },
+    {
+     "city": "Los Angeles, CA",
+     "rank": 65
+    },
+    {
+     "city": "Chicago, IL",
+     "rank": 54
+    },
+    {
+     "city": "Houston, TX",
+     "rank": 222
+    },
+    {
+     "city": "Phoenix, AZ",
+     "rank": 73
+    }
+   ],
+   "tourcast_median": 32,
+   "biggest_median": 65,
+   "random_median": 244,
+   "top20_hits": 1
+  },
+  {
+   "artist": "Mitski",
+   "country": "United States",
+   "markets": 475,
+   "planned_from": [
+    "Japanese Breakfast",
+    "Lucy Dacus",
+    "beabadoobee"
+   ],
+   "tourcast": [
+    {
+     "city": "Seattle, WA",
+     "rank": 6
+    },
+    {
+     "city": "San Francisco, CA",
+     "rank": 4
+    },
+    {
+     "city": "Portland, OR",
+     "rank": 5
+    },
+    {
+     "city": "Boston, MA",
+     "rank": 2
+    },
+    {
+     "city": "Los Angeles, CA",
+     "rank": 16
+    }
+   ],
+   "biggest": [
+    {
+     "city": "New York City, NY",
+     "rank": 3
+    },
+    {
+     "city": "Los Angeles, CA",
+     "rank": 16
+    },
+    {
+     "city": "Chicago, IL",
+     "rank": 12
+    },
+    {
+     "city": "Houston, TX",
+     "rank": 128
+    },
+    {
+     "city": "Phoenix, AZ",
+     "rank": 100
+    }
+   ],
+   "tourcast_median": 5,
+   "biggest_median": 16,
+   "random_median": 243,
+   "top20_hits": 5
+  },
+  {
+   "artist": "Hozier",
+   "country": "United States",
+   "markets": 480,
+   "planned_from": [
+    "Kodaline",
+    "James Bay",
+    "Vance Joy"
+   ],
+   "tourcast": [
+    {
+     "city": "Los Angeles, CA",
+     "rank": 11
+    },
+    {
+     "city": "Orlando, FL",
+     "rank": 28
+    },
+    {
+     "city": "Boston, MA",
+     "rank": 1
+    },
+    {
+     "city": "Seattle, WA",
+     "rank": 3
+    },
+    {
+     "city": "San Francisco, CA",
+     "rank": 9
+    }
+   ],
+   "biggest": [
+    {
+     "city": "New York City, NY",
+     "rank": 17
+    },
+    {
+     "city": "Los Angeles, CA",
+     "rank": 11
+    },
+    {
+     "city": "Chicago, IL",
+     "rank": 31
+    },
+    {
+     "city": "Houston, TX",
+     "rank": 196
+    },
+    {
+     "city": "Phoenix, AZ",
+     "rank": 85
+    }
+   ],
+   "tourcast_median": 9,
+   "biggest_median": 31,
+   "random_median": 244,
+   "top20_hits": 4
+  },
+  {
+   "artist": "Khruangbin",
+   "country": "United States",
+   "markets": 478,
+   "planned_from": [
+    "Arc De Soleil",
+    "Glass Beams",
+    "Mildlife"
+   ],
+   "tourcast": [
+    {
+     "city": "Indio, CA",
+     "rank": 1
+    },
+    {
+     "city": "Portland, OR",
+     "rank": 4
+    },
+    {
+     "city": "Medford, OR",
+     "rank": 65
+    },
+    {
+     "city": "Everett, WA",
+     "rank": 73
+    },
+    {
+     "city": "San Luis Obispo, CA",
+     "rank": 5
+    }
+   ],
+   "biggest": [
+    {
+     "city": "New York City, NY",
+     "rank": 20
+    },
+    {
+     "city": "Los Angeles, CA",
+     "rank": 8
+    },
+    {
+     "city": "Chicago, IL",
+     "rank": 31
+    },
+    {
+     "city": "Houston, TX",
+     "rank": 51
+    },
+    {
+     "city": "Phoenix, AZ",
+     "rank": 72
+    }
+   ],
+   "tourcast_median": 5,
+   "biggest_median": 31,
+   "random_median": 239,
+   "top20_hits": 3
+  },
+  {
+   "artist": "Tyler Childers",
+   "country": "United States",
+   "markets": 481,
+   "planned_from": [
+    "Charles Wesley Godwin",
+    "Charley Crockett",
+    "Chris Stapleton"
+   ],
+   "tourcast": [
+    {
+     "city": "Jackson, TN",
+     "rank": 193
+    },
+    {
+     "city": "Huntsville, AL",
+     "rank": 56
+    },
+    {
+     "city": "Bowling Green, KY",
+     "rank": 13
+    },
+    {
+     "city": "Meads, KY",
+     "rank": 1
+    },
+    {
+     "city": "Dothan, AL",
+     "rank": 178
+    }
+   ],
+   "biggest": [
+    {
+     "city": "New York City, NY",
+     "rank": 395
+    },
+    {
+     "city": "Los Angeles, CA",
+     "rank": 375
+    },
+    {
+     "city": "Chicago, IL",
+     "rank": 239
+    },
+    {
+     "city": "Houston, TX",
+     "rank": 279
+    },
+    {
+     "city": "Phoenix, AZ",
+     "rank": 155
+    }
+   ],
+   "tourcast_median": 56,
+   "biggest_median": 279,
+   "random_median": 238,
+   "top20_hits": 2
+  },
+  {
+   "artist": "Vampire Weekend",
+   "country": "United States",
+   "markets": 478,
+   "planned_from": [
+    "Two Door Cinema Club",
+    "Bombay Bicycle Club",
+    "The Strokes"
+   ],
+   "tourcast": [
+    {
+     "city": "Los Angeles, CA",
+     "rank": 8
+    },
+    {
+     "city": "San Francisco, CA",
+     "rank": 3
+    },
+    {
+     "city": "Seattle, WA",
+     "rank": 5
+    },
+    {
+     "city": "Salinas, CA",
+     "rank": 6
+    },
+    {
+     "city": "New York City, NY",
+     "rank": 7
+    }
+   ],
+   "biggest": [
+    {
+     "city": "New York City, NY",
+     "rank": 7
+    },
+    {
+     "city": "Los Angeles, CA",
+     "rank": 8
+    },
+    {
+     "city": "Chicago, IL",
+     "rank": 10
+    },
+    {
+     "city": "Houston, TX",
+     "rank": 129
+    },
+    {
+     "city": "Phoenix, AZ",
+     "rank": 70
+    }
+   ],
+   "tourcast_median": 6,
+   "biggest_median": 10,
+   "random_median": 238,
+   "top20_hits": 5
+  },
+  {
+   "artist": "Leon Bridges",
+   "country": "United States",
+   "markets": 480,
+   "planned_from": [
+    "Michael Kiwanuka",
+    "Lady Wray",
+    "Charlotte Day Wilson"
+   ],
+   "tourcast": [
+    {
+     "city": "New York City, NY",
+     "rank": 51
+    },
+    {
+     "city": "Los Angeles, CA",
+     "rank": 14
+    },
+    {
+     "city": "San Francisco, CA",
+     "rank": 6
+    },
+    {
+     "city": "Atlanta, GA",
+     "rank": 111
+    },
+    {
+     "city": "Washington, DC",
+     "rank": 85
+    }
+   ],
+   "biggest": [
+    {
+     "city": "New York City, NY",
+     "rank": 51
+    },
+    {
+     "city": "Los Angeles, CA",
+     "rank": 14
+    },
+    {
+     "city": "Chicago, IL",
+     "rank": 48
+    },
+    {
+     "city": "Houston, TX",
+     "rank": 84
+    },
+    {
+     "city": "Phoenix, AZ",
+     "rank": 76
+    }
+   ],
+   "tourcast_median": 51,
+   "biggest_median": 51,
+   "random_median": 233,
+   "top20_hits": 2
+  },
+  {
+   "artist": "Anuv Jain",
+   "country": "India",
+   "markets": 583,
+   "planned_from": [
+    "The Local Train",
+    "Prateek Kuhad",
+    "Mohit Chauhan"
+   ],
+   "tourcast": [
+    {
+     "city": "Delhi",
+     "rank": 1
+    },
+    {
+     "city": "Mumbai",
+     "rank": 2
+    },
+    {
+     "city": "Shillong",
+     "rank": 39
+    },
+    {
+     "city": "Dehradun",
+     "rank": 5
+    },
+    {
+     "city": "Bengaluru",
+     "rank": 8
+    }
+   ],
+   "biggest": [
+    {
+     "city": "Mumbai",
+     "rank": 2
+    },
+    {
+     "city": "Delhi",
+     "rank": 1
+    },
+    {
+     "city": "Bengaluru",
+     "rank": 8
+    },
+    {
+     "city": "Hyderabad",
+     "rank": 11
+    },
+    {
+     "city": "Ahmedabad",
+     "rank": 24
+    }
+   ],
+   "tourcast_median": 5,
+   "biggest_median": 8,
+   "random_median": 304,
+   "top20_hits": 4
+  },
+  {
+   "artist": "Prateek Kuhad",
+   "country": "India",
+   "markets": 778,
+   "planned_from": [
+    "The Local Train",
+    "Anuv Jain",
+    "Tajdar Junaid"
+   ],
+   "tourcast": [
+    {
+     "city": "Mumbai",
+     "rank": 3
+    },
+    {
+     "city": "Delhi",
+     "rank": 8
+    },
+    {
+     "city": "Shyamnagar",
+     "rank": 19
+    },
+    {
+     "city": "Madgaon",
+     "rank": 1
+    },
+    {
+     "city": "Dehradun",
+     "rank": 13
+    }
+   ],
+   "biggest": [
+    {
+     "city": "Mumbai",
+     "rank": 3
+    },
+    {
+     "city": "Delhi",
+     "rank": 8
+    },
+    {
+     "city": "Bengaluru",
+     "rank": 4
+    },
+    {
+     "city": "Hyderabad",
+     "rank": 12
+    },
+    {
+     "city": "Ahmedabad",
+     "rank": 22
+    }
+   ],
+   "tourcast_median": 8,
+   "biggest_median": 8,
+   "random_median": 384,
+   "top20_hits": 5
+  },
+  {
+   "artist": "Arlo Parks",
+   "country": "United Kingdom",
+   "markets": 89,
+   "planned_from": [
+    "Joesef",
+    "Remi Wolf",
+    "Sudan Archives"
+   ],
+   "tourcast": [
+    {
+     "city": "Glasgow",
+     "rank": 18
+    },
+    {
+     "city": "London",
+     "rank": 1
+    },
+    {
+     "city": "Inverness",
+     "rank": 48
+    },
+    {
+     "city": "Aberdeen",
+     "rank": 67
+    },
+    {
+     "city": "Manchester",
+     "rank": 4
+    }
+   ],
+   "biggest": [
+    {
+     "city": "London",
+     "rank": 1
+    },
+    {
+     "city": "Birmingham",
+     "rank": 12
+    },
+    {
+     "city": "Glasgow",
+     "rank": 18
+    },
+    {
+     "city": "Leeds",
+     "rank": 10
+    },
+    {
+     "city": "Bristol",
+     "rank": 2
+    }
+   ],
+   "tourcast_median": 18,
+   "biggest_median": 10,
+   "random_median": 46,
+   "top20_hits": 3
+  },
+  {
+   "artist": "Fontaines D.C.",
+   "country": "United Kingdom",
+   "markets": 89,
+   "planned_from": [
+    "Shame",
+    "SPRINTS",
+    "The Murder Capital"
+   ],
+   "tourcast": [
+    {
+     "city": "Bristol",
+     "rank": 3
+    },
+    {
+     "city": "Manchester",
+     "rank": 1
+    },
+    {
+     "city": "London",
+     "rank": 2
+    },
+    {
+     "city": "Plymouth",
+     "rank": 30
+    },
+    {
+     "city": "Newcastle upon Tyne",
+     "rank": 13
+    }
+   ],
+   "biggest": [
+    {
+     "city": "London",
+     "rank": 2
+    },
+    {
+     "city": "Birmingham",
+     "rank": 9
+    },
+    {
+     "city": "Glasgow",
+     "rank": 4
+    },
+    {
+     "city": "Leeds",
+     "rank": 7
+    },
+    {
+     "city": "Bristol",
+     "rank": 3
+    }
+   ],
+   "tourcast_median": 3,
+   "biggest_median": 4,
+   "random_median": 45,
+   "top20_hits": 4
+  }
+ ]
+}
