@@ -164,7 +164,7 @@ app/
   mock_data.py  Synthetic data for demo mode
 static/         Frontend (HTML, CSS, JS, Leaflet map)
 ```
-
+   
 ## License
-
+ City data from GeoNames (geonames.org), licensed under CC BY 4.0.
 MIT. See [LICENSE](LICENSE).
